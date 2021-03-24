@@ -2,6 +2,28 @@
   #FONTS
 \*------------------------------------*/
 
+@font-face {
+    font-family: "HK Grotesk Web";
+    font-weight: 200;
+    src: url("../fonts/hkgrotesk-light-webfont.woff2") format("woff2"),
+        url("../fonts/hkgrotesk-light-webfont.woff") format(woff);
+}
+
+@font-face {
+    font-family: "HK Grotesk Web";
+    font-weight: 400;
+    src: url("../fonts/hkgrotesk-regular-webfont.woff2") format("woff2"),
+        url("../fonts/hkgrotesk-regular-webfont.woff") format(woff);
+}
+
+@font-face {
+    font-family: "HK Grotesk Web";
+    font-weight: 600;
+    src: url("../fonts/hkgrotesk-medium-webfont.woff2") format("woff2"),
+        url("../fonts/hkgrotesk-medium-webfont.woff") format(woff);
+}
+
+
 /*------------------------------------*\
   #GENERIC
 \*------------------------------------*/
@@ -15,8 +37,8 @@
 html {
     font-size: 16px;
     line-height: 1.5;
-    font-family: Helvetica, arial, sans-serif;
-    color: #111;
+    font-family: "HK Grotesk Web",Helvetica, arial, sans-serif;
+    color: #202024;
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -28,6 +50,13 @@ html {
     box-sizing: inherit;
 }
 
+@media(min-width:768px){
+    html {
+        font-size: 20px;
+        line-height: 1.6;
+    }
+}
+
 /*
  * Remove text-shadow in selection highlight:
  * https://twitter.com/miketaylr/status/12228805301
@@ -36,8 +65,8 @@ html {
  */
 
 ::selection {
-    background: #e85e00;
-    color: white;
+    background: #5051db;
+    color: #5051db;
     text-shadow: none;
 }
 
@@ -88,6 +117,12 @@ h6 {
     margin: 0 0 24px;
 }
 
+h1,
+h2,
+h3 {
+    font-weight: 200;
+}
+
 p,
 ol,
 ul,
@@ -136,18 +171,18 @@ hr {
 }
 
 a {
-    color: RoyalBlue;
+    color: #5051db;
     transition: all .1s ease-in-out;
 }
 
 a:visited,
 a:active {
-    color: BlueViolet;
+    color: #3E3EA8;
 }
 
 a:hover,
 a:focus {
-    color: Crimson;
+    color: #3E3EA8;
 }
 
 /*------------------------------------*\
@@ -170,6 +205,7 @@ a:focus {
 
 .o-row--lg {
     padding: 48px 24px 24px;
+    display: flow-root;
 }
 
 @media (min-width: 768px) {
@@ -194,7 +230,7 @@ a:focus {
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-    max-width: 90em; /* 90 * 16px = 1440px */
+    max-width: 56.4em; /* 56.4 * 20px = 1128px */
 }
 
 /*
@@ -317,6 +353,26 @@ a:focus {
 /*------------------------------------*\
   #COMPONENTS
 \*------------------------------------*/
+
+/*
+    Component: Logo
+    ---
+    Website main logo
+*/
+
+.c-logo {
+    height: 32px;
+}
+
+.c-logo__symbol {
+    height: 100%;
+}
+
+@media (min-width: 768px) {
+    .c-logo__symbol {
+        height: 40px;
+    }
+}
 
 /*------------------------------------*\
   #UTILITIES
