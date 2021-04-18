@@ -504,6 +504,60 @@ a:focus {
 }
 
 /*
+    Component: footer
+    ---
+    Main footer of the website
+*/
+
+.c-footer {
+}
+
+.c-footer__logo {
+    display: block;
+    align-items: center;
+}
+
+.c-footer__nav {
+    display: flex;
+    gap: 16px;
+}
+
+@media (min-width: 768px) {
+    .c-footer {
+    }
+
+    .c-footer__logo {
+        display: block;
+        align-items: center;
+    }
+
+    .c-footer__nav {
+        display: flex;
+        gap: 16px;
+    }
+}
+
+@media (min-width: 992px) {
+    .c-footer {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .c-footer__logo {
+        align-items: center;
+    }
+
+    .c-footer__logo .c-logo {
+    }
+
+    .c-footer__nav {
+        display: block;
+        justify-content: space-around;
+    }
+}
+
+/*
     Component: Lead
     ---
     Lead type treatments to style everything that differs from standard typography elements
