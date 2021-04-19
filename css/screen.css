@@ -518,21 +518,25 @@ a:focus {
 }
 
 .c-footer__nav {
-    display: flex;
+    margin-right: 48px;
+    display: inline-block;
     gap: 16px;
 }
 
 @media (min-width: 768px) {
     .c-footer {
-    }
+      }
 
     .c-footer__logo {
-        display: block;
+        display: flex;
+        justify-content: space-evenly;
         align-items: center;
     }
 
     .c-footer__nav {
-        display: flex;
+        margin-right: 0;
+        display: inline-block;
+        align-items: center;
         gap: 16px;
     }
 }
@@ -545,6 +549,8 @@ a:focus {
     }
 
     .c-footer__logo {
+        display: flex;
+        justify-content: space-evenly;
         align-items: center;
     }
 
@@ -553,9 +559,29 @@ a:focus {
 
     .c-footer__nav {
         display: block;
-        justify-content: space-around;
+        justify-content: space-evenly;
     }
 }
+
+/*
+    Component: Title icon
+    ---
+    Special type of title with icon
+*/
+
+.c-title-icon {
+    display: flex;
+}
+
+.c-title-icon__icon {
+    height: 110px;
+    margin-right: 16px;
+    margin-left: 16px;
+    
+
+}
+
+
 
 /*
     Component: Lead
